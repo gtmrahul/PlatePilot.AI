@@ -17,3 +17,4 @@
 | **Database**  | Prisma ORM (SQLite)                                    |
 | **Auth**      | JWT (stubbed for now)                                  |
 
+Rahul Gautam
