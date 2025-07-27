@@ -1,10 +1,10 @@
-# 🧠🍽️ PlatePilot.AI
+# 🍛🔄 PlatePilot.AI
 
 **PlatePilot.AI** is an intelligent web application that bridges the gap between surplus food and hunger by connecting **restaurants** with **NGOs**. Built with a modern stack and AI-driven insights, it aims to reduce food waste and support food-insecure communities through seamless coordination.
 
 ---
 
-## 🚀 Tech Stack
+## Tech Stack
 
 | Layer         | Tools & Libraries                                      |
 |---------------|--------------------------------------------------------|
