@@ -1,48 +1,51 @@
-# 🧠🍽️ SmartMeal AI
+# 🧠🍽️ PlatePilot.AI
 
-**SmartMeal AI** is a responsive, intelligent web app that bridges the gap between surplus food and hunger by connecting **restaurants** with **NGOs**. Using real-time dashboards, food availability tracking, and AI-powered predictions, the platform aims to **rescue edible food** and **nourish communities**.
+**PlatePilot.AI** is an intelligent web application that bridges the gap between surplus food and hunger by connecting **restaurants** with **NGOs**. Built with a modern stack and AI-driven insights, it aims to reduce food waste and support food-insecure communities through seamless coordination.
 
 ---
 
 ## 🚀 Tech Stack
 
-- **Framework**: React + Vite  
-- **Language**: TypeScript  
-- **Routing**: React Router v6  
-- **Styling**: Tailwind CSS  
-- **Animations**: Framer Motion  
-- **Icons**: Lucide React  
-- **State & Forms**: React Hooks (useState, useEffect)  
-- **HTTP Client**: Axios  
-- **Backend**: Node.js, Express.js  
-- **Database**: Prisma ORM with SQLite  
-- **Auth**: JWT (Stubbed for now)
+| Layer         | Tools & Libraries                                      |
+|---------------|--------------------------------------------------------|
+| **Frontend**  | React (Vite), TypeScript, Tailwind CSS, Framer Motion  |
+| **Routing**   | React Router v6                                        |
+| **Icons**     | Lucide React                                           |
+| **State Mgmt**| React Hooks                                            |
+| **HTTP**      | Axios                                                  |
+| **Backend**   | Node.js, Express.js                                    |
+| **Database**  | Prisma ORM (SQLite)                                    |
+| **Auth**      | JWT (stubbed for now)                                  |
 
 ---
 
-## 🧩 Features
+## 🧩 Key Features
 
-### 🏠 Public Pages
-- ✅ Landing Page (Mission, Counters, How it Works)
-- ✅ Food Details (Available rescued food overview)
-- ✅ Reviews (Testimonials carousel)
-- ✅ FAQs
+### 🌐 Public Interface
+- Home page with mission and stats
+- Browse real-time food listings
+- Testimonials from NGO partners
+- Interactive FAQs
 
-### 🧑‍🍳 Restaurant Dashboard
-- 🍽️ Upload food details with quantity & freshness
-- 📊 Recalibration button: Instant AI model prediction
-- 🧾 Track total plates served, servings added
-- 📅 Upcoming 5 Events section with real-time preview
-- ⚙️ Settings & Profile customization
-- 🧠 View history: earnings, waste reduction, net savings
+### 🍽️ Restaurant Dashboard
+- Upload leftover meals (name, freshness, quantity)
+- One-click AI recalibration (predictive model)
+- Track meals served and earnings saved
+- Manage upcoming donation events
+- View historical data: food saved, waste avoided
+- Edit profile and preferences
 
 ### 🏥 NGO Dashboard
-- 📦 See all available food items across restaurants
-- 📩 Send food requests to restaurants
-- 💬 Send feedback after receiving food
-- 🔄 NGO activity summary on main dashboard
+- Browse meals listed by restaurants
+- Submit meal requests in real-time
+- Give post-delivery feedback
+- Dashboard with activity and fulfillment stats
 
 ---
+
+## 📁 Directory Overview
+
+
 
 ## 📁 File Structure
 
