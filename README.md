@@ -16,4 +16,3 @@
 | **Backend**   | Node.js, Express.js                                    |
 | **Database**  | Prisma ORM (SQLite)                                    |
 | **Auth**      | JWT (stubbed for now)                                  |
-

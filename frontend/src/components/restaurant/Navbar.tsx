@@ -1,6 +1,6 @@
 // frontend/src/components/restaurant/Navbar.tsx
 import React, { useEffect, useState } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Menu,
@@ -13,6 +13,7 @@ import {
   Calendar,
   File,
   Upload,
+  LogOut,
 } from "lucide-react";
 
 const NAV_LINKS = [
@@ -28,6 +29,7 @@ const NAV_LINKS = [
 const RestaurantNavbar: React.FC = () => {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
 
   /* shadow / blur on scroll */
   useEffect(() => {
@@ -35,6 +37,11 @@ const RestaurantNavbar: React.FC = () => {
     window.addEventListener("scroll", h);
     return () => window.removeEventListener("scroll", h);
   }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    navigate("/signin/restaurant");
+  };
 
   return (
     <header
@@ -91,6 +98,19 @@ const RestaurantNavbar: React.FC = () => {
                 </NavLink>
               </li>
             ))}
+            
+            {/* Logout Button */}
+            <li>
+              <motion.button
+                onClick={handleLogout}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="flex items-center text-sm font-medium text-red-600 hover:text-red-700 transition-colors duration-200"
+              >
+                <LogOut size={16} className="mr-1" />
+                Logout
+              </motion.button>
+            </li>
           </ul>
 
           {/* Burger */}
@@ -139,6 +159,24 @@ const RestaurantNavbar: React.FC = () => {
                     </NavLink>
                   </motion.li>
                 ))}
+                
+                {/* Mobile Logout Button */}
+                <motion.li
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: NAV_LINKS.length * 0.1, duration: 0.3 }}
+                >
+                  <button
+                    onClick={() => {
+                      setOpen(false);
+                      handleLogout();
+                    }}
+                    className="flex items-center rounded-lg px-4 py-3 text-lg text-red-600 hover:bg-red-50 w-full text-left"
+                  >
+                    <LogOut size={20} className="mr-3" />
+                    Logout
+                  </button>
+                </motion.li>
               </ul>
             </div>
           </motion.div>

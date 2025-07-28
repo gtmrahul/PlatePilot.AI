@@ -1,13 +1,19 @@
 import React, { useState } from 'react';
-import { Link, NavLink, Outlet } from 'react-router-dom';
+import { Link, NavLink, Outlet, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChefHat, Home, Menu, X, StarIcon, UtensilsCrossed, History, Handshake, File } from 'lucide-react';
+import { ChefHat, Home, Menu, X, StarIcon, UtensilsCrossed, History, Handshake, File, LogOut } from 'lucide-react';
 import Footer from '@/components/common/Footer';
 import FloatingFoodIcons from "@/components/common/FloatingFoodIcons";
 
 const NGOLayout: React.FC = () => {
  
   const [showMobile, setShowMobile] = useState(false);
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    navigate("/signin/ngo");
+  };
 
   const links = [
     { to: '/ngo', label: 'Dashboard', Icon: Home },
@@ -69,6 +75,17 @@ const NGOLayout: React.FC = () => {
                   <span>{label}</span>
                 </NavLink>
               ))}
+              
+              {/* Logout Button */}
+              <motion.button
+                onClick={handleLogout}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="flex items-center space-x-1 font-medium text-red-600 hover:text-red-700 transition-colors duration-200"
+              >
+                <LogOut className="h-5 w-5" />
+                <span>Logout</span>
+              </motion.button>
             </div>
 
             {/* Mobile Menu Toggle */}
@@ -102,6 +119,18 @@ const NGOLayout: React.FC = () => {
                       <span>{label}</span>
                     </Link>
                   ))}
+                  
+                  {/* Mobile Logout Button */}
+                  <button
+                    onClick={() => {
+                      setShowMobile(false);
+                      handleLogout();
+                    }}
+                    className="flex items-center space-x-2 font-medium text-red-600 hover:text-red-700 px-4 py-2 transition-colors duration-200 text-left w-full"
+                  >
+                    <LogOut className="h-5 w-5" />
+                    <span>Logout</span>
+                  </button>
                 </div>
               </motion.div>
             )}

@@ -239,5 +239,20 @@
         "totalEarning": 173.33
       }
     ]
+  },
+  {
+    "date": "2025-07-28",
+    "items": [
+      {
+        "id": "1753689247697",
+        "date": "2025-07-28",
+        "name": "Pav Bhaji",
+        "costPerPlate": 12,
+        "totalIngredientsCost": 5,
+        "totalPlates": 10,
+        "platesWasted": 50,
+        "totalEarning": -460
+      }
+    ]
   }
 ]

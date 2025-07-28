@@ -1,5 +1,5 @@
 {
-  "trainedAt": "2025-07-28T00:12:52.057438",
+  "trainedAt": "2025-07-28T13:24:24.251619",
   "epsilon": 0.2,
   "dishes": [
     "Rajma Chawal",
@@ -9,7 +9,8 @@
     "Samosa",
     "Fish Curry",
     "Egg Curry",
-    "Egg Fried Rice"
+    "Egg Fried Rice",
+    "Pav Bhaji"
   ],
   "q_values": [
     126,
@@ -19,17 +20,19 @@
     478.33,
     75.79,
     57,
-    173.33
+    173.33,
+    -460
   ],
   "counts": [
-    11,
-    21,
-    136,
     7,
-    3,
     5,
-    10,
-    7
+    85,
+    6,
+    81,
+    5,
+    6,
+    1,
+    4
   ],
   "averageRewards": {
     "Biryani": 163.2,
@@ -38,6 +41,7 @@
     "Fish Curry": 75.79,
     "Kadhi Chawal": 2960,
     "Lassi": 386.67,
+    "Pav Bhaji": -460,
     "Rajma Chawal": 126,
     "Samosa": 478.33
   },
@@ -45,5 +49,5 @@
     "dish": "Kadhi Chawal",
     "value": 2960
   },
-  "lastCalibrated": "2025-07-27T18:42:52.093Z"
+  "lastCalibrated": "2025-07-28T07:54:24.326Z"
 }
